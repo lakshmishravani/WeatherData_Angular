@@ -1,0 +1,18 @@
+<div *ngIf="currentView=='cityList'">
+  <h2>European Cities</h2>
+  <a class="cityCard" *ngFor="let item of listOfCityWithTemperature"
+    [routerLink]="['cityforecast', item.coord.lat, item.coord.lon]">
+    <div>
+      <div class="cityName">{{item.name}}</div>
+      <span class="sunrise"><label>Sun rise</label> {{item.sys.sunrise|unixToDateTime}}</span>
+    </div>
+    <div>
+      <span><label>Temp </label> <span class="temperature">{{item.main.temp|kelvinToCelsius}}<sup>o</sup>
+          C</span></span>
+      <span class="sunrise"><label>Sun set</label> {{item.sys.sunset|unixToDateTime}}</span>
+    </div>
+  </a>
+</div>
+
+
+<router-outlet></router-outlet>

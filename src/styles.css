@@ -1,0 +1,30 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 12px;
+    color: #3a3a3a;
+}
+.cityCard{
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    margin: 15px;
+    display: block;
+    color: #096f02db;
+}
+.cityName, .date{
+    font-weight: 600;
+    font-style: italic;
+    font-size: 16px;
+    display: inline-block;
+}
+.temperature{
+    font-size: 16px;
+}
+.sunrise, .sealevel{
+    float: right;
+}
+label{
+    font-style: italic;
+    color: gray;
+}

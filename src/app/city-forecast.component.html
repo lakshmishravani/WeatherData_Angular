@@ -1,0 +1,10 @@
+<h2>{{cityName}} City forecast</h2>
+<div *ngIf="currentView=='cityforecast'">
+  <div class="cityCard" *ngFor="let item of cityForecast">
+    <span><label>Temp </label> <span class="temperature">{{item.main.temp|kelvinToCelsius}}<sup>o</sup> C</span></span>
+    <div>
+      <div class="date">{{item.dt|unixToDate}} 09:00:00</div>
+      <span class="sealevel"><label>Sea level</label> {{item.main.sea_level}}</span>
+    </div>
+  </div>
+</div>
